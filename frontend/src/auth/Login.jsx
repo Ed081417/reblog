@@ -10,45 +10,48 @@ import {
 import { NavLink } from "react-router";
 import { Field } from "@/components/ui/field";
 
-function Register() {
+function Login() {
   return (
     <Flex height="100vh" alignItems="center" justifyContent="center">
       <Card.Root maxW="sm" width="100%">
         <Card.Header>
-          <Card.Title>Sign up</Card.Title>
+          <Card.Title>Login</Card.Title>
           <Card.Description>
-            Fill in the form below to create an account
+            Welcome back! Sign in to continue.
           </Card.Description>
         </Card.Header>
         <Card.Body>
           <Stack gap="4" w="full">
-            <Field label="Name">
-              <Input placeholder="John Doe" />
-            </Field>
             <Field label="Email">
               <Input placeholder="john@email.com" />
             </Field>
             <Field label="Password">
               <Input type="password" />
             </Field>
-            <Field label="Confirm Password">
-              <Input type="password" />
-            </Field>
+            <Flex justify="flex-end">
+              <ChakraLink variant="underline" href="#">
+                Forgot password?
+              </ChakraLink>
+            </Flex>
           </Stack>
         </Card.Body>
-        <Card.Footer justifyContent="flex-end">
-          <Flex justify="space-between" alignItems="center" width="100%">
-            <Text>
+        <Card.Footer>
+          <Stack gap="4" w="full">
+            <Button variant="solid" width="100%">
+              {" "}
+              Login
+            </Button>
+            <Text textAlign="center">
+              Don't have an account?{" "}
               <ChakraLink variant="underline" asChild>
-                <NavLink to="/login">Already registered?</NavLink>
+                <NavLink to="/register">Sign up</NavLink>
               </ChakraLink>
             </Text>
-            <Button variant="solid">Register</Button>
-          </Flex>
+          </Stack>
         </Card.Footer>
       </Card.Root>
     </Flex>
   );
 }
 
-export default Register;
+export default Login;

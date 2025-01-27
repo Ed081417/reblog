@@ -1,9 +1,10 @@
 import { Provider } from "@/components/ui/provider"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router"
 import App from './App.jsx'
 import Register from './auth/Register.jsx'
+import Login from './auth/Login.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -11,9 +12,10 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
       </BrowserRouter>
     </Provider>
-  </StrictMode>,
+  </StrictMode>
 )
