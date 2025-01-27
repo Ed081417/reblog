@@ -1,25 +1,10 @@
-import { NavLink } from "react-router";
-import { Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
+import Landing from "./Landing.jsx";
+import Home from "./Home.jsx";
 
-function Hero() {
-  return (
-    <Flex height="100vh" alignItems="center" justifyContent="center">
-      <Container maxW="container.lg" textAlign="center">
-        <Heading as="h1" size="2xl" mb={4} color="teal.500">
-          Reblog
-        </Heading>
-        <Text fontSize="xl" mb={8} color="gray.600">
-          Share your thoughts, stories, and ideas with the world. Join the
-          blogging revolution today!
-        </Text>
-        <NavLink to="/login">
-          <Button colorScheme="teal" size="lg">
-            Get Started
-          </Button>
-        </NavLink>
-      </Container>
-    </Flex>
-  );
+function App() {
+  const isLoggedIn = true;
+
+  return <div>{isLoggedIn ? <Home /> : <Landing />}</div>;
 }
 
-export default Hero;
+export default App;
