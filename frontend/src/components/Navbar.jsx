@@ -1,4 +1,5 @@
 import { Flex, Text, Link } from "@chakra-ui/react";
+import { ChevronDown } from 'lucide-react';
 import {
   MenuContent,
   MenuItem,
@@ -31,7 +32,7 @@ function Navbar() {
         <MenuRoot>
           <MenuTrigger asChild>
             <Link href="#" _focus={{ outline: "none" }}>
-              John Doe
+              John Doe<ChevronDown size={16} />
             </Link>
           </MenuTrigger>
           <MenuContent>
