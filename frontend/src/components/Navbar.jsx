@@ -1,5 +1,6 @@
-import { Flex, Text, Link } from "@chakra-ui/react";
-import { ChevronDown } from "lucide-react";
+import { Flex, Text, Button } from "@chakra-ui/react";
+import { NavLink } from "react-router";
+import { Avatar } from "@/components/ui/avatar";
 import {
   MenuContent,
   MenuItem,
@@ -21,25 +22,17 @@ function Navbar() {
       </Text>
 
       <Flex alignItems="center" gap={4}>
-        <Link
-          href="#"
-          variant="underline"
-          colorPalette="cyan.contrast"
-          _focus={{ outline: "none" }}
-        >
+        <NavLink to="/" end>
           Home
-        </Link>
+        </NavLink>
 
-        <Link href="#" variant="underline" _focus={{ outline: "none" }}>
-          Create Post
-        </Link>
+        <NavLink to="/post/create">Create Post</NavLink>
 
         <MenuRoot>
           <MenuTrigger asChild>
-            <Link href="#" variant="underline" _focus={{ outline: "none" }}>
-              John Doe
-              <ChevronDown size={16} />
-            </Link>
+            <Button size="xs" variant="plain">
+              <Avatar src="#" colorPalette="gray" />
+            </Button>
           </MenuTrigger>
           <MenuContent>
             <MenuItem value="new-txt">Profile</MenuItem>

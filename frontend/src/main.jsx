@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router"
 import App from './App.jsx'
 import Register from './auth/Register.jsx'
 import Login from './auth/Login.jsx'
+import CreatePost from './CreatePost.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/post/create" element={<CreatePost />} />
       </Routes>
       </BrowserRouter>
     </Provider>

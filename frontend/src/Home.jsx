@@ -6,6 +6,7 @@ function Home() {
   return (
     <>
       <Navbar />
+      
       <Grid
         templateColumns={{ base: "1fr", md: "1fr 2fr 1fr" }}
         height="100vh"
