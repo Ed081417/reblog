@@ -1,5 +1,6 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 import Navbar from "./components/Navbar.jsx";
+import Posts from "./components/Posts.jsx";
 
 function Home() {
   return (
@@ -9,18 +10,15 @@ function Home() {
         templateColumns={{ base: "1fr", md: "1fr 2fr 1fr" }}
         height="100vh"
         p={4}
+        bg="gray.50"
       >
-        <GridItem bg="gray.100" p={4} display={{ base: "none", md: "block" }}>
-          Left Sidebar
+        <GridItem p={4} display={{ base: "none", md: "block" }}></GridItem>
+
+        <GridItem p={4}>
+          <Posts />
         </GridItem>
 
-        <GridItem bg="gray.200" p={4}>
-          Main Content
-        </GridItem>
-
-        <GridItem bg="gray.100" p={4} display={{ base: "none", md: "block" }}>
-          Right Sidebar
-        </GridItem>
+        <GridItem p={4} display={{ base: "none", md: "block" }}></GridItem>
       </Grid>
     </>
   );

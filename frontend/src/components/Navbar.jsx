@@ -1,5 +1,5 @@
 import { Flex, Text, Link } from "@chakra-ui/react";
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown } from "lucide-react";
 import {
   MenuContent,
   MenuItem,
@@ -10,7 +10,7 @@ import {
 function Navbar() {
   return (
     <Flex
-      bg="teal.500"
+      bg="teal.400"
       color="white"
       p={4}
       alignItems="center"
@@ -21,18 +21,24 @@ function Navbar() {
       </Text>
 
       <Flex alignItems="center" gap={4}>
-        <Link href="#" colorPalette="accent" _focus={{ outline: "none" }}>
+        <Link
+          href="#"
+          variant="underline"
+          colorPalette="cyan.contrast"
+          _focus={{ outline: "none" }}
+        >
           Home
         </Link>
 
-        <Link href="#" _focus={{ outline: "none" }}>
+        <Link href="#" variant="underline" _focus={{ outline: "none" }}>
           Create Post
         </Link>
 
         <MenuRoot>
           <MenuTrigger asChild>
-            <Link href="#" _focus={{ outline: "none" }}>
-              John Doe<ChevronDown size={16} />
+            <Link href="#" variant="underline" _focus={{ outline: "none" }}>
+              John Doe
+              <ChevronDown size={16} />
             </Link>
           </MenuTrigger>
           <MenuContent>
