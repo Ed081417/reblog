@@ -1,5 +1,6 @@
-import { Card, Heading, Stack, Button, Text, Link } from "@chakra-ui/react";
+import { Card, Heading, Stack, Button, Text, Link as ChakraLink } from "@chakra-ui/react";
 import { Pencil, Trash2 } from "lucide-react";
+import { NavLink } from "react-router";
 
 function Home() {
   return (
@@ -7,9 +8,9 @@ function Home() {
       <Card.Root size="md">
         <Card.Header>
           <Heading size="2xl">
-            <Link variant="underline" href="#">
-              Tokyo Drift
-            </Link>
+            <ChakraLink variant="underline" asChild>
+              <NavLink to="/post/1">Tokyo Drift</NavLink>
+            </ChakraLink>
           </Heading>
         </Card.Header>
         <Card.Body color="fg.muted">
@@ -35,9 +36,9 @@ function Home() {
       <Card.Root size="md">
         <Card.Header>
           <Heading size="2xl">
-            <Link variant="underline" href="#">
+            <ChakraLink variant="underline" href="#">
               Solo Leveling
-            </Link>
+            </ChakraLink>
           </Heading>
         </Card.Header>
         <Card.Body color="fg.muted">
@@ -63,9 +64,9 @@ function Home() {
       <Card.Root size="md">
         <Card.Header>
           <Heading size="2xl">
-            <Link variant="underline" href="#">
+            <ChakraLink variant="underline" href="#">
               Cebu
-            </Link>
+            </ChakraLink>
           </Heading>
         </Card.Header>
         <Card.Body color="fg.muted">
