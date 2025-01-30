@@ -16,7 +16,11 @@ function Home() {
       <Card.Root size="md">
         <Card.Header>
           <Heading size="2xl">
-            <ChakraLink variant="underline" asChild>
+            <ChakraLink
+              variant="underline"
+              _focus={{ outline: "none" }}
+              asChild
+            >
               <NavLink to="/post/1">Tokyo Drift</NavLink>
             </ChakraLink>
           </Heading>

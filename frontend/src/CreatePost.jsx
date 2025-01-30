@@ -21,7 +21,7 @@ function CreatePost() {
           <Card.Body>
             <Stack gap="4" w="full">
               <Field label="Title">
-                <Input />
+                <Input autoFocus />
               </Field>
               <Field label="Body">
                 <Textarea size="xl" />

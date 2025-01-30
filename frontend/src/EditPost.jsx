@@ -22,7 +22,7 @@ function EditPost() {
     <>
       <Navbar />
 
-      <Center marginTop="10">
+      <Center marginY="10">
         <Card.Root maxW="xl" width="100%">
           <Card.Header>
             <Card.Title>Edit Post</Card.Title>
