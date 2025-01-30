@@ -1,6 +1,14 @@
-import { Card, Heading, Stack, Button, Text, Link as ChakraLink } from "@chakra-ui/react";
+import {
+  Card,
+  Heading,
+  Stack,
+  Button,
+  Text,
+  Link as ChakraLink,
+} from "@chakra-ui/react";
 import { Pencil, Trash2 } from "lucide-react";
 import { NavLink } from "react-router";
+import DeletePostDialog from "./DeletePostDialog.jsx";
 
 function Home() {
   return (
@@ -26,10 +34,8 @@ function Home() {
             <Pencil size={16} />
             Edit
           </Button>
-          <Button size="xs" variant="surface" colorPalette="red">
-            <Trash2 />
-            Delete
-          </Button>
+
+          <DeletePostDialog />
         </Card.Footer>
       </Card.Root>
 
