@@ -7,6 +7,7 @@ import Register from "./auth/Register.jsx";
 import Login from "./auth/Login.jsx";
 import CreatePost from "./CreatePost.jsx";
 import ShowPost from "./ShowPost.jsx";
+import EditPost from "./EditPost.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -18,6 +19,7 @@ createRoot(document.getElementById("root")).render(
           <Route path="/register" element={<Register />} />
           <Route path="/post/create" element={<CreatePost />} />
           <Route path="/post/1" element={<ShowPost />} />
+          <Route path="/post/1/edit" element={<EditPost />} />
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -30,9 +30,11 @@ function Home() {
           </Text>
         </Card.Body>
         <Card.Footer justifyContent="flex-end">
-          <Button size="xs" variant="surface" colorPalette="yellow">
-            <Pencil size={16} />
-            Edit
+          <Button size="xs" variant="surface" colorPalette="yellow" asChild>
+            <NavLink to="/post/1/edit">
+              <Pencil size={16} />
+              Edit
+            </NavLink>
           </Button>
 
           <DeletePostDialog />
